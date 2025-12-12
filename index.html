@@ -40,16 +40,22 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 4rem;
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    border-radius: 0 0 40px 40px;
+    padding: 1rem 3rem;
     
-    box-shadow: 0 5px 20px rgba(158, 43, 44, 0.3); 
-    z-index: 1000; 
+    position: fixed;
+    top: 20px;                 /* TURUNKAN DARI ATAS → efek mengambang */
+    left: 50%;
+    transform: translateX(-50%); /* supaya posisinya benar-benar center */
+    width: 90%;                /* tidak full, agar kelihatan melayang */
+
+    border-radius: 20px;       /* lebih halus */
+    box-shadow: 0 10px 25px rgba(158, 43, 44, 0.25);
+    z-index: 1000;
+
+    backdrop-filter: blur(10px); /* efek kaca (optional, bisa dihapus) */
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
+
 
 
     nav ul {
@@ -146,30 +152,41 @@ nav {
             </div>
 
             <div class="home-image">
-                <img src="Images/uy.png" alt="kartun">
+                <img src="Images/lurus.png" alt="kartun">
             </div>
         </div>
     </section>
 
 
   <section class="about" id="about">
-    <div class="about-wrapper">
-        <div class="about-content">
-            <article class="text">
-                <p>
-                    Hello, lets me introduce myself, <br>
-                    my name is <span style="color: rgb(226, 126, 12)">Muhammad Fadhlan Farizan Sutendi</span>,
-                    you can call me <span style="color: rgb(226, 126, 12)">Fadhlan</span>, <br>
-                    I am 18 years old, I study at SMK WIKRAMA BOGOR, <br>
-                    my major is software and game development. My current position is mobile development.
-                </p>
-            </article>
-        </div>
+  <div class="about-wrapper">
+    
+    <!-- Bagian Teks -->
+    <div class="about-content">
+        <article class="text">
+            <p>
+                Hello, let me introduce myself, <br>
+                my name is 
+                <span style="color: rgb(226, 126, 12)">Muhammad Fadhlan Farizan Sutendi</span>, 
+                you can call me 
+                <span style="color: rgb(226, 126, 12)">Fadhlan</span>, <br>
+                I am 18 years old, I study at SMK WIKRAMA BOGOR, <br>
+                my major is software and game development. My current position is mobile development.
+            </p>
 
-        <div class="about-img">
-            <img src="Images/uy.png" alt="">
-        </div>
+            <!-- Tombol CV di bawah garis -->
+            <a href="files/CV-Fadhlan-Up.pdf" download class="download-btn">
+                Lihat CV
+            </a>
+        </article>
     </div>
+
+    <!-- Bagian Gambar -->
+    <div class="about-img">
+        <img src="Images/about.jpg" alt="Profile Photo">
+    </div>
+</div>
+
 </section>
 
 
@@ -179,89 +196,69 @@ nav {
     <div class="container text-center">
     <div class="row">
 
-        <div class="col">
-            <div class="img-box">
-                <img src="Images/kasir.png" width="320px" alt="">
-                <span class="more-details">More Details</span>
-            </div>
-            <h4>
-                <a href="">
-                    Mesin Kasir
-                </a>
-            </h4>
-        </div>
+     <div class="col">
+    <div class="img-box">
+        <img src="Images/kasir.png" width="320px" alt="">
+        <span class="more-details">More Details</span>
+    </div>
+    <h4><a href="">Mesin Kasir</a></h4>
+</div>
 
-        <div class="col">
-            <div class="img-box">
-                <img src="Images/data siswa.png" width="320px" alt="">
-                <span class="more-details">More Details</span>
-            </div>
-            <h4>
-                <a href="">
-                    Data Siswa
-                </a>
-            </h4>
-        </div>
+<div class="col">
+    <div class="img-box">
+        <img src="Images/data siswa.png" width="320px" alt="">
+        <span class="more-details">More Details</span>
+    </div>
+    <h4><a href="">Data Siswa</a></h4>
+</div>
 
-        <div class="col">
-            <div class="img-box">
-                <img src="Images/bensin.png" width="320px" alt="">
-                <span class="more-details">More Details</span>
-            </div>
-            <h4>
-                <a href="">
-                    Liter Bensin
-                </a>
-            </h4>
-        </div>
+<div class="col">
+    <div class="img-box">
+        <img src="Images/bensin.png" width="320px" alt="">
+        <span class="more-details">More Details</span>
+    </div>
+    <h4><a href="">Liter Bensin</a></h4>
+</div>
 
-        <div class="col">
-            <div class="img-box">
-                <img src="Images/luas.png" width="320px" alt="">
-                <span class="more-details">More Details</span>
-            </div>
-            <h4>
-                <a href="">
-                    Hitung luas persegi panjang dan segitiga
-                </a>
-            </h4>
-        </div>
+<div class="col">
+    <div class="img-box">
+        <img src="Images/luas.png" width="320px" alt="">
+        <span class="more-details">More Details</span>
+    </div>
+    <h4><a href="">Hitung luas persegi panjang dan segitiga</a></h4>
+</div>
 
-        <div class="col">
-            <div class="img-box">
-                <img src="Images/shoes.png" width="320px" alt="">
-                <span class="more-details">More Details</span>
-            </div>
-            <h4>
-                <a href="">
-                    Web Shop
-                </a>
-            </h4>
-        </div>
+<div class="col">
+    <div class="img-box">
+        <img src="Images/shoes.png" width="320px" alt="">
+        <span class="more-details">More Details</span>
+    </div>
+    <h4><a href="">Web Shop</a></h4>
+</div>
 
-        <div class="col">
-            <div class="img-box">
-                <img src="Images/sewa.png" width="320px" alt="">
-                <span class="more-details">More Details</span>
-            </div>
-            <h4>
-                <a href="">
-                    Rental Motor
-                </a>
-            </h4>
-        </div>
+<div class="col">
+    <div class="img-box">
+        <img src="Images/sewa.png" width="320px" alt="">
+        <span class="more-details">More Details</span>
+    </div>
+    <h4><a href="">Rental Motor</a></h4>
+</div>
 
-        <div class="col">
-            <div class="img-box">
-                <img src="Images/wikven.png" width="320px" alt="">
-                <span class="more-details">More Details</span>
-            </div>
-            <h4>
-                <a href="">
-                    Wikventory
-                </a>
-            </h4>
-        </div>
+<div class="col">
+    <div class="img-box">
+        <img src="Images/wikven.png" width="320px" alt="">
+        <span class="more-details">More Details</span>
+    </div>
+    <h4><a href="">Wikventory</a></h4>
+</div>
+
+<!-- POPUP GAMBAR -->
+<div id="imagePopup" class="popup">
+    <span class="close-btn">&times;</span>
+    <img id="popupImage" src="" alt="">
+</div>
+
+
 
 
     </div>
@@ -278,8 +275,6 @@ nav {
         <div class="judul skill">
         <h2>My Skill</h2>
         </div>
-
-        <!-- Languages Programming (Label dihapus) -->
         <div class="skill-container">
             <div class="item">
                 <img src="Images/10.png" alt="HTML" class="icon">
@@ -435,6 +430,38 @@ nav {
         <p>User Terms & Conditions | Privacy Policy</p>
     </footer>
 </section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const buttons = document.querySelectorAll(".more-details");
+    const popup = document.getElementById("imagePopup");
+    const popupImg = document.getElementById("popupImage");
+    const closeBtn = document.querySelector(".close-btn");
+
+    buttons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            // ambil gambar pada card yang sama
+            const img = btn.previousElementSibling;
+            popupImg.src = img.src;
+            popup.style.display = "flex";
+        });
+    });
+
+    closeBtn.addEventListener("click", () => {
+        popup.style.display = "none";
+    });
+
+    popup.addEventListener("click", (e) => {
+        if (e.target === popup) popup.style.display = "none";
+    });
+
+});
+</script>
+
+
+
+
 
 
 
