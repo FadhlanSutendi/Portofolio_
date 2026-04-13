@@ -88,12 +88,21 @@ nav {
     }
 </style>
 
-<body>
+<body class="intro-active">
+
+    <div class="welcome-overlay" id="welcomeOverlay">
+        <div class="welcome-copy" id="enterPortfolioButton" role="button" tabindex="0" aria-label="Masuk ke portfolio" onclick="openPortfolioIntro()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openPortfolioIntro();}">
+            <h2>Welcome</h2>
+            
+        </div>
+    </div>
+
+    <div class="page-content" id="pageContent">
 
     <nav>
         <div class="logo">
-  <h1>Portofolio.</h1>
-</div>
+            <h1>Portofolio.</h1>
+        </div>
 
         <ul>
             <li><a href="#home"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" fill="currentColor"
@@ -123,12 +132,12 @@ nav {
 
                 <h2>
                     Hello,
-                    My name is <span style="color: rgb(226, 126, 12);">Muhammad Fadhlan Farizan Sutendi</span>
+                    My name is <span class="hero-name" id="heroName" data-full-name="Muhammad Fadhlan Farizan Sutendi">Muhammad Fadhlan Farizan Sutendi</span>
                 </h2>
 
                 <div class="text-animation">
                     <span class="text first-text">I'm a </span>
-                    <span class="text sec-text">Mobile development</span>
+                    <span class="text sec-text" id="heroRole" data-roles="Mobile Development,Flutter Developer,Frontend Developer">Mobile Development</span>
                 </div>
                 <div class="icon-item">
                     <a href="https://www.linkedin.com/in/muhammad-fadhlan-farizan-sutendi-321603321/"><svg
@@ -137,7 +146,7 @@ nav {
                             <path
                                 d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
                         </svg></a>
-                    <a href=https://wa.me/+62 857-1538-2391><svg
+                    <a href="https://wa.me/+6285715382391"><svg
                             xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-whatsapp" viewBox="0 0 16 16">
                             <path
@@ -161,27 +170,22 @@ nav {
   <section class="about" id="about">
   <div class="about-wrapper">
     
-    <!-- Bagian Teks -->
     <div class="about-content">
         <article class="text">
-            <p>
-                Hello, let me introduce myself, <br>
+            <p class="about-typing" id="aboutTyping" data-full-text="Hello, let me introduce myself, my name is Muhammad Fadhlan Farizan Sutendi, you can call me Fadhlan, I am 18 years old, I study at SMK WIKRAMA BOGOR, my major is software and game development. My current position is mobile development.">Hello, let me introduce myself, <br>
                 my name is 
-                <span style="color: rgb(226, 126, 12)">Muhammad Fadhlan Farizan Sutendi</span>, 
+                <span class="about-highlight">Muhammad Fadhlan Farizan Sutendi</span>, 
                 you can call me 
-                <span style="color: rgb(226, 126, 12)">Fadhlan</span>, <br>
-                I am 18 years old, I study at SMK WIKRAMA BOGOR, <br>
-                my major is software and game development. My current position is mobile development.
-            </p>
+                <span class="about-highlight">Fadhlan</span>, <br>
+                I am 18 years old, I study at <span class="about-highlight">SMK WIKRAMA BOGOR</span>, <br>
+                my major is software and game development. My current position is mobile development.</p>
 
-            <!-- Tombol CV di bawah garis -->
             <a href="files/CV-Fadhlan-Up.pdf" download class="download-btn">
                 Lihat CV
             </a>
         </article>
     </div>
 
-    <!-- Bagian Gambar -->
     <div class="about-img">
         <img src="Images/pp.jpeg" alt="Profile Photo">
     </div>
@@ -261,13 +265,8 @@ nav {
     <img id="popupImage" src="" alt="">
 </div>
 
-
-
-
     </div>
 </div>
-        </div>
-    </div>
 </section>
 
 
@@ -276,7 +275,7 @@ nav {
    <section class="skill">
     <div class="skill-box">
         <div class="judul skill">
-        <h2>My Skill</h2>
+        <h2><span style="color: rgb(226, 126, 12)">My </span>Skill</h2>
         </div>
         <div class="skill-container">
             <div class="item">
@@ -336,55 +335,86 @@ nav {
 </section>
 
 
-<div class="sertifikat-wrapper">
+<section class="sertifikat-wrapper">
     <div class="certi judul">
-    <h2 style="margin-top: 20px;">My Certificate</h2>
+    <h2 style="margin-top: 20px;"><span style="color: rgb(226, 126, 12)">My </span>Certificate</h2>
     </div>
 
-    <div class="sertifikat">
+    <div class="certificate-slider-shell">
+        <div class="sertifikat-viewport">
+            <div class="sertifikat">
+                <a class="certificate" href="https://www.dicoding.com/certificates/QLZ9RYWWMP5D" target="_blank" rel="noreferrer">
+                    <img src="Images/1.png" width="70px" alt="Seminar KSPM GOES TO SCHOOL">
+                    <p>Seminar KSPM GOES TO SCHOOL</p>
+                    <p>Unpak</p>
+                    <span>Lihat sertifikat</span>
+                </a>
 
-        <div class="certificate">
-            <img src="Images/1.png" width="70px" alt="">
-            <p>Seminar KSPM GOES TO SCHOOL</p>
-            <p>Unpak</p>
-            <a href="https://www.dicoding.com/certificates/QLZ9RYWWMP5D">
-            </a>
-        </div>
+                <a class="certificate" href="https://www.dicoding.com/certificates/GRX5OM0QYP0M" target="_blank" rel="noreferrer">
+                    <img src="Images/2.png" width="70px" alt="IGDX Career seminar">
+                    <p>IGDX Career seminar</p>
+                    <p>KOMINFO</p>
+                    <span>Lihat sertifikat</span>
+                </a>
 
-        <div class="certificate">
-            <img src="Images/2.png" width="70px" alt="">
-            <p>IGDX Career seminar</p>
-            <p>KOMINFO</p>
-            <a href="https://www.dicoding.com/certificates/GRX5OM0QYP0M">
-            </a>
-        </div>
+                <a class="certificate" href="https://www.dicoding.com/certificates/98XWLJ7K9ZM3" target="_blank" rel="noreferrer">
+                    <img src="Images/3.png" width="70px" alt="Belajar Dasar Pemrograman Web">
+                    <p>Belajar Dasar Pemrograman Web</p>
+                    <p>Dicoding</p>
+                    <span>Lihat sertifikat</span>
+                </a>
 
-        <div class="certificate">
-            <img src="Images/3.png" width="70px" alt="">
-            <p>Belajar Dasar Pemrograman Web</p>
-            <p>Dicoding</p>
-            <a href="https://www.dicoding.com/certificates/98XWLJ7K9ZM3">
-            </a>
-        </div>
+                <a class="certificate" href="https://www.dicoding.com/certificates/JMZV36VGNPN9" target="_blank" rel="noreferrer">
+                    <img src="Images/4.png" width="70px" alt="Belajar Dasar Unity">
+                    <p>Belajar Dasar Unity</p>
+                    <p>Unity</p>
+                    <span>Lihat sertifikat</span>
+                </a>
 
-        <div class="certificate">
-            <img src="Images/4.png" width="70px" alt="">
-            <p>Belajar Dasar Unity</p>
-            <p>Unity</p>
-            <a href="https://www.dicoding.com/certificates/JMZV36VGNPN9">
-            </a>
-        </div>
-        <div class="certificate">
-            <img src="Images/5.png" width="70px" alt="">
-            <p>Introduction to Financial Literacy</p>
-            <p>Dicoding</p>
-            <a href="https://www.dicoding.com/certificates/JMZV36VGNPN9">
-            </a>
-        </div>
+                <a class="certificate" href="https://www.dicoding.com/certificates/JMZV36VGNPN9" target="_blank" rel="noreferrer">
+                    <img src="Images/5.png" width="70px" alt="Introduction to Financial Literacy">
+                    <p>Introduction to Financial Literacy</p>
+                    <p>Dicoding</p>
+                    <span>Lihat sertifikat</span>
+                </a>
 
+                <a class="certificate" href="https://www.dicoding.com/certificates/QLZ9RYWWMP5D" target="_blank" rel="noreferrer" aria-hidden="true">
+                    <img src="Images/1.png" width="70px" alt="Seminar KSPM GOES TO SCHOOL">
+                    <p>Seminar KSPM GOES TO SCHOOL</p>
+                    <p>Unpak</p>
+                    <span>Lihat sertifikat</span>
+                </a>
+
+                <a class="certificate" href="https://www.dicoding.com/certificates/GRX5OM0QYP0M" target="_blank" rel="noreferrer" aria-hidden="true">
+                    <img src="Images/2.png" width="70px" alt="IGDX Career seminar">
+                    <p>IGDX Career seminar</p>
+                    <p>KOMINFO</p>
+                    <span>Lihat sertifikat</span>
+                </a>
+
+                <a class="certificate" href="https://www.dicoding.com/certificates/98XWLJ7K9ZM3" target="_blank" rel="noreferrer" aria-hidden="true">
+                    <img src="Images/3.png" width="70px" alt="Belajar Dasar Pemrograman Web">
+                    <p>Belajar Dasar Pemrograman Web</p>
+                    <p>Dicoding</p>
+                    <span>Lihat sertifikat</span>
+                </a>
+
+                <a class="certificate" href="https://www.dicoding.com/certificates/JMZV36VGNPN9" target="_blank" rel="noreferrer" aria-hidden="true">
+                    <img src="Images/4.png" width="70px" alt="Belajar Dasar Unity">
+                    <p>Belajar Dasar Unity</p>
+                    <p>Unity</p>
+                    <span>Lihat sertifikat</span>
+                </a>
+
+                <a class="certificate" href="https://www.dicoding.com/certificates/JMZV36VGNPN9" target="_blank" rel="noreferrer" aria-hidden="true">
+                    <img src="Images/5.png" width="70px" alt="Introduction to Financial Literacy">
+                    <p>Introduction to Financial Literacy</p>
+                    <p>Dicoding</p>
+                    <span>Lihat sertifikat</span>
+                </a>
+            </div>
+        </div>
     </div>
-    </div>
-
 </section>
 
 <section class="footer-section">
@@ -438,6 +468,28 @@ nav {
     </footer>
 </section>
 
+    </div>
+
+<script>
+function openPortfolioIntro() {
+    const welcomeOverlay = document.getElementById("welcomeOverlay");
+
+    if (!welcomeOverlay || document.body.classList.contains("intro-entering")) {
+        return;
+    }
+
+    document.body.classList.add("intro-entering");
+    welcomeOverlay.classList.add("is-hidden");
+    document.body.classList.remove("intro-active");
+    window.__portfolioIntroOpened = true;
+    window.dispatchEvent(new CustomEvent("portfolio:intro-opened"));
+
+    window.setTimeout(() => {
+        document.body.classList.remove("intro-entering");
+    }, 1200);
+}
+</script>
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -445,23 +497,206 @@ document.addEventListener("DOMContentLoaded", function () {
     const popup = document.getElementById("imagePopup");
     const popupImg = document.getElementById("popupImage");
     const closeBtn = document.querySelector(".close-btn");
+    const welcomeOverlay = document.getElementById("welcomeOverlay");
+    const enterPortfolioButton = document.getElementById("enterPortfolioButton");
+    const heroName = document.getElementById("heroName");
+    const heroRole = document.getElementById("heroRole");
+    const aboutTyping = document.getElementById("aboutTyping");
+    const aboutSection = document.getElementById("about");
+    const revealTargets = document.querySelectorAll(".container-hm, .about-wrapper, .item, .child");
+    let heroNameAnimated = false;
+    let aboutTextAnimated = false;
 
-    buttons.forEach(btn => {
-        btn.addEventListener("click", () => {
-            // ambil gambar pada card yang sama
-            const img = btn.previousElementSibling;
-            popupImg.src = img.src;
-            popup.style.display = "flex";
+    if (popup && popupImg && closeBtn) {
+        buttons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const img = btn.previousElementSibling;
+
+                if (!img) {
+                    return;
+                }
+
+                popupImg.src = img.src;
+                popup.style.display = "flex";
+            });
         });
+
+        closeBtn.addEventListener("click", () => {
+            popup.style.display = "none";
+        });
+
+        popup.addEventListener("click", (e) => {
+            if (e.target === popup) popup.style.display = "none";
+        });
+    }
+
+    revealTargets.forEach((target) => {
+        target.classList.add("reveal-on-scroll");
     });
 
-    closeBtn.addEventListener("click", () => {
-        popup.style.display = "none";
-    });
+    const revealOnScroll = () => {
+        revealTargets.forEach((target) => {
+            const targetTop = target.getBoundingClientRect().top;
+            if (targetTop < window.innerHeight - 80) {
+                target.classList.add("is-visible");
+            }
+        });
 
-    popup.addEventListener("click", (e) => {
-        if (e.target === popup) popup.style.display = "none";
-    });
+        if (aboutSection && aboutTyping && !aboutTextAnimated) {
+            const aboutTop = aboutSection.getBoundingClientRect().top;
+            if (aboutTop < window.innerHeight - 120) {
+                startAboutTypingAnimation();
+            }
+        }
+    };
+
+    revealOnScroll();
+    window.addEventListener("scroll", revealOnScroll, { passive: true });
+
+    const startHeroNameAnimation = () => {
+        if (!heroName || heroNameAnimated) {
+            return;
+        }
+
+        heroNameAnimated = true;
+        const fullName = heroName.dataset.fullName || "";
+        let currentIndex = 0;
+
+        heroName.textContent = "";
+        heroName.classList.remove("is-running-light");
+        heroName.classList.add("is-typing");
+
+        const typingTimer = window.setInterval(() => {
+            currentIndex += 1;
+            heroName.textContent = fullName.slice(0, currentIndex);
+
+            if (currentIndex >= fullName.length) {
+                window.clearInterval(typingTimer);
+                heroName.classList.remove("is-typing");
+                heroName.classList.add("is-running-light");
+            }
+        }, 95);
+    };
+
+    const runHeroNameAnimation = () => {
+        window.setTimeout(startHeroNameAnimation, 220);
+    };
+
+    const startHeroRoleAnimation = () => {
+        if (!heroRole) {
+            return;
+        }
+
+        const roles = (heroRole.dataset.roles || "Mobile Development")
+            .split(",")
+            .map((item) => item.trim())
+            .filter(Boolean);
+
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        const typeRole = () => {
+            const currentRole = roles[roleIndex] || "Mobile Development";
+
+            if (!isDeleting) {
+                charIndex += 1;
+                heroRole.textContent = currentRole.slice(0, charIndex);
+
+                if (charIndex >= currentRole.length) {
+                    heroRole.classList.remove("is-typing");
+                    heroRole.classList.add("is-running-light");
+                    window.setTimeout(() => {
+                        isDeleting = true;
+                        typeRole();
+                    }, 1400);
+                    return;
+                }
+
+                window.setTimeout(typeRole, 85);
+                return;
+            }
+
+            heroRole.classList.remove("is-running-light");
+            heroRole.classList.add("is-typing");
+            charIndex -= 1;
+            heroRole.textContent = currentRole.slice(0, Math.max(charIndex, 0));
+
+            if (charIndex <= 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                window.setTimeout(typeRole, 320);
+                return;
+            }
+
+            window.setTimeout(typeRole, 45);
+        };
+
+        heroRole.textContent = "";
+        heroRole.classList.remove("is-running-light");
+        heroRole.classList.add("is-typing");
+        window.setTimeout(typeRole, 420);
+    };
+
+    const runHeroRoleAnimation = () => {
+        window.setTimeout(startHeroRoleAnimation, 640);
+    };
+
+    // Ketika welcome dibuka, jalankan efek ketik lalu running light.
+    window.addEventListener("portfolio:intro-opened", runHeroNameAnimation);
+    window.addEventListener("portfolio:intro-opened", runHeroRoleAnimation);
+
+    // Kalau intro sudah tidak aktif dari awal, langsung jalankan animasi.
+    if (!document.body.classList.contains("intro-active") || window.__portfolioIntroOpened) {
+        runHeroNameAnimation();
+        runHeroRoleAnimation();
+    }
+
+    const highlightAboutText = (text) => {
+        return text
+            .replace(
+                "Muhammad Fadhlan Farizan Sutendi",
+                '<span class="about-highlight">Muhammad Fadhlan Farizan Sutendi</span>'
+            )
+            .replace(
+                "Fadhlan",
+                '<span class="about-highlight">Fadhlan</span>'
+            )
+            .replace(
+                "SMK WIKRAMA BOGOR",
+                '<span class="about-highlight">SMK WIKRAMA BOGOR</span>'
+            );
+    };
+
+    const startAboutTypingAnimation = () => {
+        if (!aboutTyping || aboutTextAnimated) {
+            return;
+        }
+
+        aboutTextAnimated = true;
+        const fullText = aboutTyping.dataset.fullText || "";
+        let currentIndex = 0;
+
+        aboutTyping.textContent = "";
+        aboutTyping.classList.add("is-typing");
+
+        const typingTimer = window.setInterval(() => {
+            currentIndex += 1;
+            aboutTyping.textContent = fullText.slice(0, currentIndex);
+
+            if (currentIndex >= fullText.length) {
+                window.clearInterval(typingTimer);
+                aboutTyping.classList.remove("is-typing");
+                aboutTyping.classList.add("is-floating");
+                aboutTyping.innerHTML = highlightAboutText(fullText);
+            }
+        }, 26);
+    };
+
+    if (enterPortfolioButton && welcomeOverlay) {
+        enterPortfolioButton.addEventListener("click", openPortfolioIntro);
+        welcomeOverlay.addEventListener("click", openPortfolioIntro);
+    }
 
 });
 </script>
