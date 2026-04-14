@@ -19,71 +19,117 @@
 </head>
 
 <style>
-    
-
     body {
         padding: 0;
         margin: 0;
-        background-color: #f4f4f4;
+        background: var(--bg);
         font-family: 'Poppins', sans-serif;
+        color: var(--text);
+        transition: background 0.4s ease, color 0.4s ease;
     }
 
     .logo {
-        font-size: 7rgb(226, 126, 12)0px;
-        font-weight: bold;
-        color: #9e2b2c;
+        font-size: 1.4rem;
+        font-weight: 900;
+        color: var(--accent-strong);
+        letter-spacing: 0.04em;
     }
 
-
-nav {
-    background-color: #faf5b3;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 3rem;
-    
-    position: fixed;
-    top: 20px;                 /* TURUNKAN DARI ATAS → efek mengambang */
-    left: 50%;
-    transform: translateX(-50%); /* supaya posisinya benar-benar center */
-    width: 90%;                /* tidak full, agar kelihatan melayang */
-
-    border-radius: 20px;       /* lebih halus */
-    box-shadow: 0 10px 25px rgba(158, 43, 44, 0.25);
-    z-index: 1000;
-
-    backdrop-filter: blur(10px); /* efek kaca (optional, bisa dihapus) */
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-
+    nav {
+        background: linear-gradient(135deg, rgba(255,255,255,0.88), rgba(229,241,255,0.92));
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 2.5rem;
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: min(96%, 1200px);
+        border-radius: 32px;
+        box-shadow: 0 18px 42px rgba(37, 99, 235, 0.14);
+        z-index: 1000;
+        backdrop-filter: blur(18px);
+        border: 1px solid rgba(37, 99, 235, 0.12);
+    }
 
     nav ul {
         display: flex;
         align-items: center;
-        gap: 3rem;
+        gap: 2rem;
         list-style: none;
+        margin-left: auto;
     }
 
     nav ul li a {
-        font-size: 20px;
+        position: relative;
+        font-size: 1rem;
         text-decoration: none;
-        color: #9e2b2c;
-        font-weight: 600;
+        color: var(--accent);
+        font-weight: 700;
         padding: 8px 0;
-        transition: all;
-        transition-duration: 300ms;
-        border-bottom: 2px solid rgba(116, 254, 106, 0);
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav ul li a::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -4px;
+        width: 0;
+        height: 2px;
+        background: var(--accent-strong);
+        transition: width 0.3s ease, left 0.3s ease;
+        transform: translateX(-50%);
     }
 
     nav ul li a:hover {
-        border-bottom: 2px solid rgb(226, 126, 12);
-        color: #B8860B;
+        color: var(--accent-strong);
+        transform: translateY(-1px);
+    }
+
+    nav ul li a:hover::after {
+        width: 100%;
+        left: 50%;
+    }
+
+    .theme-toggle {
+        border: 1px solid rgba(37, 99, 235, 0.18);
+        background: rgba(255, 255, 255, 0.9);
+        color: var(--accent-strong);
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 14px 28px rgba(37, 99, 235, 0.18);
+        cursor: pointer;
+        transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+        backdrop-filter: blur(12px);
+    }
+
+    .theme-toggle:hover {
+        transform: translateY(-2px);
+    }
+
+    .theme-toggle:focus-visible {
+        outline: 2px solid var(--accent-strong);
+        outline-offset: 4px;
     }
 
     @media(max-width:991px) {
         nav {
-            padding: 1rem 3%;
+            padding: 1rem 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        nav ul {
+            gap: 1.25rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
         }
     }
 </style>
@@ -122,6 +168,10 @@ nav {
                             d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z" />
                     </svg> Contact</a></li>
         </ul>
+
+        <button class="theme-toggle" type="button" aria-label="Toggle theme">
+            <i class="fa-solid fa-moon"></i>
+        </button>
     </nav>
 
 
@@ -195,7 +245,7 @@ nav {
 
 
    <section class="project">
-    <h1 class="heading"> <span style="color: rgb(226, 126, 12)  ">MY</span> <span style="color: #9e2b2c">PROJECT</span></h1>
+    <h1 class="heading"> <span style="color: var(--accent-soft)">MY</span> <span style="color: var(--accent)">PROJECT</span></h1>
 
     <div class="container text-center">
     <div class="row">
@@ -275,7 +325,7 @@ nav {
    <section class="skill">
     <div class="skill-box">
         <div class="judul skill">
-        <h2><span style="color: rgb(226, 126, 12)">My </span>Skill</h2>
+        <h2><span style="color: var(--accent-soft)">My </span>Skill</h2>
         </div>
         <div class="skill-container">
             <div class="item">
@@ -337,7 +387,7 @@ nav {
 
 <section class="sertifikat-wrapper">
     <div class="certi judul">
-    <h2 style="margin-top: 20px;"><span style="color: rgb(226, 126, 12)">My </span>Certificate</h2>
+    <h2 style="margin-top: 20px;"><span style="color: var(--accent-soft)">My </span>Certificate</h2>
     </div>
 
     <div class="certificate-slider-shell">
@@ -419,7 +469,7 @@ nav {
 
 <section class="footer-section">
     <div class="footer-top">
-        <h1>Let’s <span style="color: rgb(226, 126, 12)  ">Build Something </span> together</h1>
+        <h1>Let’s <span style="color: var(--accent-soft)">Build Something </span> together</h1>
     </div>
 
     <div class="footer-main">
@@ -504,6 +554,27 @@ document.addEventListener("DOMContentLoaded", function () {
     const aboutTyping = document.getElementById("aboutTyping");
     const aboutSection = document.getElementById("about");
     const revealTargets = document.querySelectorAll(".container-hm, .about-wrapper, .item, .child");
+    const themeToggle = document.querySelector('.theme-toggle');
+
+    const applyTheme = (theme) => {
+        const isDark = theme === 'dark';
+        document.body.classList.toggle('dark-theme', isDark);
+        if (themeToggle) {
+            themeToggle.innerHTML = isDark ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+            themeToggle.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
+        }
+    };
+
+    const savedTheme = localStorage.getItem('site-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    applyTheme(savedTheme);
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const newTheme = document.body.classList.contains('dark-theme') ? 'light' : 'dark';
+            localStorage.setItem('site-theme', newTheme);
+            applyTheme(newTheme);
+        });
+    }
     let heroNameAnimated = false;
     let aboutTextAnimated = false;
 
