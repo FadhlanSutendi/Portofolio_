@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -36,7 +37,7 @@
     }
 
     nav {
-        background: linear-gradient(135deg, rgba(255,255,255,0.88), rgba(229,241,255,0.92));
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.88), rgba(229, 241, 255, 0.92));
         display: flex;
         align-items: center;
         gap: 1rem;
@@ -137,641 +138,804 @@
 <body class="intro-active">
 
     <div class="welcome-overlay" id="welcomeOverlay">
-        <div class="welcome-copy" id="enterPortfolioButton" role="button" tabindex="0" aria-label="Masuk ke portfolio" onclick="openPortfolioIntro()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openPortfolioIntro();}">
+        <div class="welcome-copy" id="enterPortfolioButton" role="button" tabindex="0" aria-label="Masuk ke portfolio"
+            onclick="openPortfolioIntro()"
+            onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openPortfolioIntro();}">
             <h2>Welcome</h2>
-            
+
         </div>
     </div>
 
     <div class="page-content" id="pageContent">
 
-    <nav>
-        <div class="logo">
-            <h1>Portofolio.</h1>
-        </div>
+        <nav>
+            <div class="logo">
+                <h1>Portofolio.</h1>
+            </div>
 
-        <ul>
-            <li><a href="#home"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" fill="currentColor"
-                        class="bi bi-house" viewBox="0 0 16 16">
-                        <path
-                            d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
-                    </svg> Home</a></li>
-            <li><a href="#about"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" fill="currentColor"
-                        class="bi bi-file-person" viewBox="0 0 16 16">
-                        <path
-                            d="M12 1a1 1 0 0 1 1 1v10.755S12 11 8 11s-5 1.755-5 1.755V2a1 1 0 0 1 1-1zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
-                        <path d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-                    </svg> About</a></li>
-            <li><a href="#contact"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-person-lines-fill" viewBox="0 0 16 16">
-                        <path
-                            d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z" />
-                    </svg> Contact</a></li>
-        </ul>
+            <ul>
+                <li><a href="#home"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" fill="currentColor"
+                            class="bi bi-house" viewBox="0 0 16 16">
+                            <path
+                                d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                        </svg> Home</a></li>
+                <li><a href="#about"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" fill="currentColor"
+                            class="bi bi-file-person" viewBox="0 0 16 16">
+                            <path
+                                d="M12 1a1 1 0 0 1 1 1v10.755S12 11 8 11s-5 1.755-5 1.755V2a1 1 0 0 1 1-1zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                            <path d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                        </svg> About</a></li>
+                <li><a href="#contact"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z" />
+                        </svg> Contact</a></li>
+            </ul>
 
-        <button class="theme-toggle" type="button" aria-label="Toggle theme">
-            <i class="fa-solid fa-moon"></i>
-        </button>
-    </nav>
+            <button class="theme-toggle" type="button" aria-label="Toggle theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </nav>
 
 
-    <section class="home" id="home">
+        <section class="home" id="home">
 
-        <div class="container-hm">
-            <div class="home-content">
+            <div class="container-hm">
+                <div class="home-content">
 
-                <h2>
-                    Hello,
-                    My name is <span class="hero-name" id="heroName" data-full-name="Muhammad Fadhlan Farizan Sutendi">Muhammad Fadhlan Farizan Sutendi</span>
-                </h2>
+                    <h2>
+                        Hello,
+                        My name is <span class="hero-name" id="heroName"
+                            data-full-name="Muhammad Fadhlan Farizan Sutendi">Muhammad Fadhlan Farizan Sutendi</span>
+                    </h2>
 
-                <div class="text-animation">
-                    <span class="text first-text">I'm a </span>
-                    <span class="text sec-text" id="heroRole" data-roles="Mobile Development,Flutter Developer,Frontend Developer">Mobile Development</span>
+                    <div class="text-animation">
+                        <span class="text first-text">I'm a </span>
+                        <span class="text sec-text" id="heroRole"
+                            data-roles="Mobile Development,Flutter Developer,Frontend Developer">Mobile
+                            Development</span>
+                    </div>
+                    <div class="icon-item">
+                        <a href="https://www.linkedin.com/in/muhammad-fadhlan-farizan-sutendi-321603321/"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                            </svg></a>
+                        <a href="https://wa.me/+6285715382391"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                <path
+                                    d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                            </svg></a>
+                        <a href="mailto:ffarizansutendi@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
+                            </svg></a>
+                    </div>
                 </div>
-                <div class="icon-item">
-                    <a href="https://www.linkedin.com/in/muhammad-fadhlan-farizan-sutendi-321603321/"><svg
-                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-linkedin" viewBox="0 0 16 16">
-                            <path
-                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
-                        </svg></a>
-                    <a href="https://wa.me/+6285715382391"><svg
-                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-whatsapp" viewBox="0 0 16 16">
-                            <path
-                                d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
-                        </svg></a>
-                    <a href="mailto:ffarizansutendi@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-envelope" viewBox="0 0 16 16">
-                            <path
-                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
-                        </svg></a>
+
+                <div class="home-image">
+                    <img src="Images/lurus.png" alt="kartun">
+                </div>
+            </div>
+        </section>
+
+
+        <section class="about" id="about">
+            <div class="about-wrapper">
+
+                <div class="about-content">
+                    <article class="text">
+                        <p class="about-typing" id="aboutTyping"
+                            data-full-text="Hello, let me introduce myself, my name is Muhammad Fadhlan Farizan Sutendi, you can call me Fadhlan, I am 18 years old, I study at SMK WIKRAMA BOGOR, my major is software and game development. My current position is mobile development.">
+                            Hello, let me introduce myself, <br>
+                            my name is
+                            <span class="about-highlight">Muhammad Fadhlan Farizan Sutendi</span>,
+                            you can call me
+                            <span class="about-highlight">Fadhlan</span>, <br>
+                            I am 18 years old, I study at <span class="about-highlight">SMK WIKRAMA BOGOR</span>, <br>
+                            my major is software and game development. My current position is mobile development.
+                        </p>
+
+                        <a href="files/CV-Fadhlan-Up.pdf" download class="download-btn">
+                            Lihat CV
+                        </a>
+                    </article>
+                </div>
+
+                <div class="about-img">
+                    <img src="Images/pp.jpeg" alt="Profile Photo">
                 </div>
             </div>
 
-            <div class="home-image">
-                <img src="Images/lurus.png" alt="kartun">
+        </section>
+
+
+        <section class="project">
+            <h1 class="heading"> <span style="color: var(--accent-soft)">MY</span> <span
+                    style="color: var(--accent)">PROJECT</span></h1>
+
+            <div class="container text-center">
+                <div class="row">
+
+                    <div class="col">
+                        <div class="img-box">
+                            <img src="Images/wikven.png" width="320px" alt="">
+                            <span class="more-details">More Details</span>
+                        </div>
+                        <h4><a href="">Wikventory</a></h4>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="img-box">
+                            <img src="Images/TIKET.png" width="320px" alt="">
+                            <span class="more-details">More Details</span>
+                        </div>
+                        <h4><a href="">Ticketing Apps</a></h4>
+                    </div>
+
+                    <div class="col">
+                        <div class="img-box">
+                            <img src="Images/rental lapangan.png" width="320px" alt="">
+                            <span class="more-details">More Details</span>
+                        </div>
+                        <h4><a href="">Court Rental</a></h4>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="img-box">
+                            <img src="Images/kasir.png" width="320px" alt="">
+                            <span class="more-details">More Details</span>
+                        </div>
+                        <h4><a href="">Mesin Kasir</a></h4>
+                    </div>
+
+
+                    <div class="col">
+                        <div class="img-box">
+                            <img src="Images/web shop.png" width="320px" alt="">
+                            <span class="more-details">More Details</span>
+                        </div>
+                        <h4><a href="">Web Shop</a></h4>
+                    </div>
+
+                    <div class="col">
+                        <div class="img-box">
+                            <img src="Images/warga.png" width="320px" alt="">
+                            <span class="more-details">More Details</span>
+                        </div>
+                        <h4><a href="">Public Complaints</a></h4>
+                    </div>
+
+                    <div class="col">
+                        <div class="img-box">
+                            <img src="Images/luas.png" width="320px" alt="">
+                            <span class="more-details">More Details</span>
+                        </div>
+                        <h4><a href="">Hitung luas persegi panjang dan segitiga</a></h4>
+                    </div>
+                    <div class="col">
+                        <div class="img-box">
+                            <img src="Images/resto.png" width="320px" alt="">
+                            <span class="more-details">More Details</span>
+                        </div>
+                        <h4><a href="">Resto Management</a></h4>
+                    </div>
+
+                    <!-- POPUP GAMBAR -->
+                    <div id="imagePopup" class="popup">
+                        <span class="close-btn">&times;</span>
+                        <img id="popupImage" src="" alt="">
+                    </div>
+
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
 
-  <section class="about" id="about">
-  <div class="about-wrapper">
-    
-    <div class="about-content">
-        <article class="text">
-            <p class="about-typing" id="aboutTyping" data-full-text="Hello, let me introduce myself, my name is Muhammad Fadhlan Farizan Sutendi, you can call me Fadhlan, I am 18 years old, I study at SMK WIKRAMA BOGOR, my major is software and game development. My current position is mobile development.">Hello, let me introduce myself, <br>
-                my name is 
-                <span class="about-highlight">Muhammad Fadhlan Farizan Sutendi</span>, 
-                you can call me 
-                <span class="about-highlight">Fadhlan</span>, <br>
-                I am 18 years old, I study at <span class="about-highlight">SMK WIKRAMA BOGOR</span>, <br>
-                my major is software and game development. My current position is mobile development.</p>
-
-            <a href="files/CV-Fadhlan-Up.pdf" download class="download-btn">
-                Lihat CV
-            </a>
-        </article>
-    </div>
-
-    <div class="about-img">
-        <img src="Images/pp.jpeg" alt="Profile Photo">
-    </div>
-</div>
-
-</section>
 
 
-   <section class="project">
-    <h1 class="heading"> <span style="color: var(--accent-soft)">MY</span> <span style="color: var(--accent)">PROJECT</span></h1>
+        <section class="skill">
+            <div class="skill-box">
+                <div class="judul skill">
+                    <h2><span style="color: var(--accent-soft)">My </span>Skill</h2>
+                </div>
+                <div class="skill-container">
+                    <div class="item">
+                        <img src="Images/10.png" alt="HTML" class="icon">
+                        <h4>HTML</h4>
+                    </div>
+                    <div class="item">
+                        <img src="Images/21.png" alt="CSS" class="icon">
+                        <h4>CSS</h4>
+                    </div>
+                    <div class="item">
+                        <img src="Images/11.png" alt="DART" class="icon">
+                        <h4>DART</h4>
+                    </div>
+                    <div class="item">
+                        <img src="Images/12.png" alt="PHP" class="icon">
+                        <h4>PHP</h4>
+                    </div>
+                </div>
 
-    <div class="container text-center">
-    <div class="row">
-    
-    <div class="col">
-    <div class="img-box">
-        <img src="Images/wikven.png" width="320px" alt="">
-        <span class="more-details">More Details</span>
-    </div>
-    <h4><a href="">Wikventory</a></h4>
-</div>
-
-
-<div class="col">
-    <div class="img-box">
-        <img src="Images/TIKET.png" width="320px" alt="">
-        <span class="more-details">More Details</span>
-    </div>
-    <h4><a href="">Ticketing Apps</a></h4>
-</div>
-
-<div class="col">
-    <div class="img-box">
-        <img src="Images/rental lapangan.png" width="320px" alt="">
-        <span class="more-details">More Details</span>
-    </div>
-    <h4><a href="">Court Rental</a></h4>
-</div>
-
-
- <div class="col">
-    <div class="img-box">
-        <img src="Images/kasir.png" width="320px" alt="">
-        <span class="more-details">More Details</span>
-    </div>
-    <h4><a href="">Mesin Kasir</a></h4>
-</div>
-
-
-<div class="col">
-    <div class="img-box">
-        <img src="Images/web shop.png" width="320px" alt="">
-        <span class="more-details">More Details</span>
-    </div>
-    <h4><a href="">Web Shop</a></h4>
-</div>
-
-<div class="col">
-    <div class="img-box">
-        <img src="Images/warga.png" width="320px" alt="">
-        <span class="more-details">More Details</span>
-    </div>
-    <h4><a href="">Public Complaints</a></h4>
-</div>
-
-<div class="col">
-    <div class="img-box">
-        <img src="Images/luas.png" width="320px" alt="">
-        <span class="more-details">More Details</span>
-    </div>
-    <h4><a href="">Hitung luas persegi panjang dan segitiga</a></h4>
-</div>
-
-<!-- POPUP GAMBAR -->
-<div id="imagePopup" class="popup">
-    <span class="close-btn">&times;</span>
-    <img id="popupImage" src="" alt="">
-</div>
-
-    </div>
-</div>
-</section>
+                <div class="frame">
+                    <div class="child">
+                        <img src="Images/13.png" alt="Bootstrap" class="icon">
+                        <h4>Bootstrap</h4>
+                    </div>
+                    <div class="child">
+                        <img src="Images/14.png" alt="Flutter" class="icon">
+                        <h4>Flutter</h4>
+                    </div>
+                    <div class="child">
+                        <img src="Images/15.png" alt="Laravel" class="icon">
+                        <h4>Laravel</h4>
+                    </div>
+                </div>
 
 
-   
+                <div class="tools">
+                    <div class="child">
+                        <img src="Images/16.png" alt="GitHub" class="icon">
+                        <h4>GitHub</h4>
+                    </div>
+                    <div class="child">
+                        <img src="Images/20.png" alt="VS Code" class="icon">
+                        <h4>Figma</h4>
+                    </div>
+                    <div class="child">
+                        <img src="Images/18.png" alt="XAMPP" class="icon">
+                        <h4>Vs Code</h4>
+                    </div>
+                    <div class="child">
+                        <img src="Images/19.png" alt="Figma" class="icon">
+                        <h4>XAMPP</h4>
+                    </div>
+                </div>
 
-   <section class="skill">
-    <div class="skill-box">
-        <div class="judul skill">
-        <h2><span style="color: var(--accent-soft)">My </span>Skill</h2>
-        </div>
-        <div class="skill-container">
-            <div class="item">
-                <img src="Images/10.png" alt="HTML" class="icon">
-                <h4>HTML</h4>
             </div>
-            <div class="item">
-                <img src="Images/21.png" alt="CSS" class="icon">
-                <h4>CSS</h4>
+        </section>
+
+
+        <section class="sertifikat-wrapper">
+            <div class="certi judul">
+                <h2 style="margin-top: 20px;"><span style="color: var(--accent-soft)">My </span>Certificate</h2>
             </div>
-            <div class="item">
-                <img src="Images/11.png" alt="DART" class="icon">
-                <h4>DART</h4>
+
+            <div class="certificate-slider-shell">
+                <div class="sertifikat-viewport">
+                    <div class="sertifikat">
+                        <a class="certificate" href="" target="_blank" rel="noreferrer">
+                            <img src="Images/1.png" width="70px" alt="Seminar KSPM GOES TO SCHOOL">
+                            <p>Seminar KSPM GOES TO SCHOOL</p>
+                            <p>Unpak</p>
+                            <span>Lihat sertifikat</span>
+                        </a>
+
+                        <a class="certificate" href="" target="_blank" rel="noreferrer">
+                            <img src="Images/2.png" width="70px" alt="IGDX Career seminar">
+                            <p>IGDX Career seminar</p>
+                            <p>KOMINFO</p>
+                            <span>Lihat sertifikat</span>
+                        </a>
+
+                        <a class="certificate" href="" target="_blank" rel="noreferrer">
+                            <img src="Images/3.png" width="70px" alt="Belajar Dasar Pemrograman Web">
+                            <p>Belajar Dasar Pemrograman Web</p>
+                            <p>Dicoding</p>
+                            <span>Lihat sertifikat</span>
+                        </a>
+
+                        <a class="certificate" href="" target="_blank" rel="noreferrer">
+                            <img src="Images/4.png" width="70px" alt="Belajar Dasar Unity">
+                            <p>Belajar Dasar Unity</p>
+                            <p>Unity</p>
+                            <span>Lihat sertifikat</span>
+                        </a>
+
+                        <a class="certificate" href="" target="_blank" rel="noreferrer">
+                            <img src="Images/5.png" width="70px" alt="Introduction to Financial Literacy">
+                            <p>Introduction to Financial Literacy</p>
+                            <p>Dicoding</p>
+                            <span>Lihat sertifikat</span>
+                        </a>
+
+                        <a class="certificate" href="" target="_blank" rel="noreferrer" aria-hidden="true">
+                            <img src="Images/1.png" width="70px" alt="Seminar KSPM GOES TO SCHOOL">
+                            <p>Seminar KSPM GOES TO SCHOOL</p>
+                            <p>Unpak</p>
+                            <span>Lihat sertifikat</span>
+                        </a>
+
+                        <a class="certificate" href="" target="_blank" rel="noreferrer" aria-hidden="true">
+                            <img src="Images/2.png" width="70px" alt="IGDX Career seminar">
+                            <p>IGDX Career seminar</p>
+                            <p>KOMINFO</p>
+                            <span>Lihat sertifikat</span>
+                        </a>
+
+                        <a class="certificate" href="" target="_blank" rel="noreferrer" aria-hidden="true">
+                            <img src="Images/3.png" width="70px" alt="Belajar Dasar Pemrograman Web">
+                            <p>Belajar Dasar Pemrograman Web</p>
+                            <p>Dicoding</p>
+                            <span>Lihat sertifikat</span>
+                        </a>
+
+                        <a class="certificate" href="" target="_blank" rel="noreferrer" aria-hidden="true">
+                            <img src="Images/4.png" width="70px" alt="Belajar Dasar Unity">
+                            <p>Belajar Dasar Unity</p>
+                            <p>Unity</p>
+                            <span>Lihat sertifikat</span>
+                        </a>
+
+                        <a class="certificate" href="" target="_blank" rel="noreferrer" aria-hidden="true">
+                            <img src="Images/5.png" width="70px" alt="Introduction to Financial Literacy">
+                            <p>Introduction to Financial Literacy</p>
+                            <p>Dicoding</p>
+                            <span>Lihat sertifikat</span>
+                        </a>
+                        <a class="certificate" href="" target="_blank" rel="noreferrer" aria-hidden="true">
+                            <img src="Images/22.jpg" width="70px" alt="Effective Speaking and Listening Skills (Bahasa)">
+                            <p>Effective Speaking and Listening Skills (Bahasa)</p>
+                            <p>Wadhwani</p>
+                            <span>Lihat sertifikat</span>
+                        </a>
+                        <a class="certificate" href="" target="_blank" rel="noreferrer" aria-hidden="true">
+                            <img src="Images/23.jpg" width="70px" alt="Employability Skills (Bahasa)">
+                            <p>Employability Skills (Bahasa)</p>
+                            <p>Wadhwani</p>
+                            <span>Lihat sertifikat</span>
+                        </a>
+                        <a class="certificate" href="" target="_blank" rel="noreferrer" aria-hidden="true">
+                            <img src="Images/24.jpg" width="70px" alt="Impactful Writing Skills (Bahasa)">
+                            <p>Impactful Writing Skills (Bahasa)</p>
+                            <p>Wadhwani</p>
+                            <span>Lihat sertifikat</span>
+                        </a>
+                        <a class="certificate" href="" target="_blank" rel="noreferrer" aria-hidden="true">
+                            <img src="Images/25.jpg" width="70px" alt="Self-Presentation Skills (Bahasa)">
+                            <p>Self-Presentation Skills (Bahasa)</p>
+                            <p>Wadhwani</p>
+                            <span>Lihat sertifikat</span>
+                        </a>
+                        <a class="certificate" href="" target="_blank" rel="noreferrer" aria-hidden="true">
+                            <img src="Images/26.jpg" width="70px" alt="Self-Management Skills (Bahasa)">
+                            <p>Self-Management Skills (Bahasa)</p>
+                            <p>Wadhwani</p>
+                            <span>Lihat sertifikat</span>
+                        </a>
+                        <a class="certificate" href="" target="_blank" rel="noreferrer" aria-hidden="true">
+                            <img src="Images/27.jpg" width="70px" alt="Interpersonal Skills (Bahasa)">
+                            <p>Interpersonal Skills (Bahasa)</p>
+                            <p>Wadhwani</p>
+                            <span>Lihat sertifikat</span>
+                        </a>
+                        <a class="certificate" href="" target="_blank" rel="noreferrer" aria-hidden="true">
+                            <img src="Images/28.jpg" width="70px" alt="Problem Solving & Innovation (Bahasa)">
+                            <p>Problem Solving & Innovation (Bahasa)</p>
+                            <p>Wadhwani</p>
+                            <span>Lihat sertifikat</span>
+                        </a>
+                        <a class="certificate" href="" target="_blank" rel="noreferrer" aria-hidden="true">
+                            <img src="Images/29.jpg" width="70px" alt="Profesioanlism (Bahasa)">
+                            <p>Profesioanlism (Bahasa)</p>
+                            <p>Wadhwani</p>
+                            <span>Lihat sertifikat</span>
+                        </a>
+                        <a class="certificate" href="" target="_blank" rel="noreferrer" aria-hidden="true">
+                            <img src="Images/30.jpg" width="70px" alt="Customer Centricity (Bahasa)">
+                            <p>Customer Centricity (Bahasa)</p>
+                            <p>Wadhwani</p>
+                            <span>Lihat sertifikat</span>
+                        </a>
+                        <a class="certificate" href="" target="_blank" rel="noreferrer" aria-hidden="true">
+                            <img src="Images/31.jpg" width="70px" alt="Work Productivity Tools (Bahasa)">
+                            <p>Work Productivity Tools (Bahasa)</p>
+                            <p>Wadhwani</p>
+                            <span>Lihat sertifikat</span>
+                        </a>
+                        <a class="certificate" href="" target="_blank" rel="noreferrer" aria-hidden="true">
+                            <img src="Images/32.jpg" width="70px" alt="Introduction to Financial Literacy">
+                            <p>Introduction to Financial Literacy</p>
+                            <p>Dicoding</p>
+                            <span>Lihat sertifikat</span>
+                        </a>
+                        <a class="certificate" href="" target="_blank" rel="noreferrer" aria-hidden="true">
+                            <img src="Images/33.jpg" width="70px" alt="Online Communication & Data Security (Bahasa)">
+                            <p>Online Communication & Data Security (Bahasa)</p>
+                            <p>Wadhwani</p>
+                            <span>Lihat sertifikat</span>
+                        </a>
+                        <a class="certificate" href="" target="_blank" rel="noreferrer" aria-hidden="true">
+                            <img src="Images/34.jpg" width="70px" alt="Programming Logic 101">
+                            <p>Programming Logic 101</p>
+                            <p>Dicoding</p>
+                            <span>Lihat sertifikat</span>
+                        </a>
+                        <a class="certificate" href="" target="_blank" rel="noreferrer" aria-hidden="true">
+                            <img src="Images/35.jpg" width="70px" alt="Belajar Dasar Pemrograman JavaScript">
+                            <p>Belajar Dasar Pemrograman JavaScript</p>
+                            <p>Dicoding</p>
+                            <span>Lihat sertifikat</span>
+                        </a>
+                        <a class="certificate" href="" target="_blank" rel="noreferrer" aria-hidden="true">
+                            <img src="Images/36.jpg" width="70px" alt="Belajar Dasar Cloud dan Gen AI di AWS">
+                            <p>Belajar Dasar Cloud dan Gen AI di AWS</p>
+                            <p>Dicoding</p>
+                            <span>Lihat sertifikat</span>
+                        </a>
+                        <a class="certificate" href="" target="_blank" rel="noreferrer" aria-hidden="true">
+                            <img src="Images/37.jpg" width="70px" alt="Belajar Membuat Aplikasi Web dengan React">
+                            <p>Belajar Membuat Aplikasi Web dengan React</p>
+                            <p>Dicoding</p>
+                            <span>Lihat sertifikat</span>
+                        </a>
+                        <a class="certificate" href="" target="_blank" rel="noreferrer" aria-hidden="true">
+                            <img src="Images/38.jpg" width="70px" alt="Memulai Dasar Pengembangan untuk Menjadi Pengembang Software">
+                            <p>Memulai Dasar Pengembangan untuk Menjadi Pengembang Software</p>
+                            <p>Dicoding</p>
+                            <span>Lihat sertifikat</span>
+                        </a>
+                        <a class="certificate" href="" target="_blank" rel="noreferrer" aria-hidden="true">
+                            <img src="Images/39.jpg" width="70px" alt="Belajar Dasar Pemrograman Web">
+                            <p>Belajar Dasar Pemrograman Web</p>
+                            <p>Dicoding</p>
+                            <span>Lihat sertifikat</span>
+                        </a>
+                        <a class="certificate" href="" target="_blank" rel="noreferrer" aria-hidden="true">
+                            <img src="Images/40.jpg" width="70px" alt="Belajar Membuat Front End Web untuk Pemula">
+                            <p>Belajar Membuat Front End Web untuk Pemula</p>
+                            <p>Dicoding</p>
+                            <span>Lihat sertifikat</span>
+                        </a>
+                        <a class="certificate" href="" target="_blank" rel="noreferrer" aria-hidden="true">
+                            <img src="Images/41.jpg" width="70px" alt="Belajar Back End Pemula dengan JavaScript">
+                            <p>Belajar Back End Pemula dengan JavaScript</p>
+                            <p>Dicoding</p>
+                            <span>Lihat sertifikat</span>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="item">
-                <img src="Images/12.png" alt="PHP" class="icon">
-                <h4>PHP</h4>
+        </section>
+
+        <section class="footer-section">
+            <div class="footer-top">
+                <h1>Let’s <span style="color: var(--accent-soft)">Build Something </span> together</h1>
             </div>
-        </div>
 
-        <div class="frame">
-            <div class="child">
-                <img src="Images/13.png" alt="Bootstrap" class="icon">
-                <h4>Bootstrap</h4>
+            <div class="footer-main">
+                <div class="footer-box glass-card">
+
+                    <div class="map-wrapper glass-card">
+                        <div class="map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!4v1765463915395!6m8!1m7!1snebEKRe9JipuUf18vg3sRw!2m2!1d-6.742014987835814!2d106.8182097196779!3f22.41027397260273!4f-3.252602739726001!5f0.4000000000000002"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="address-box">
+                            <i class="fa-solid fa-location-dot"></i>
+                            Bogor, Jawa Barat – Indonesia
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <section class="contact glass-card" id="contact">
+                    <div class="container-contact">
+                        <h3>Send a Massage</h3>
+
+                        <form class="contact-form">
+                            <input type="text" placeholder="Subject" required>
+                            <input type="text" placeholder="Name" required>
+                            <input type="email" placeholder="Email Address" required>
+                            <textarea placeholder="Message" required></textarea>
+                            <button type="submit">Send</button>
+
+                            <h3>Follow Me</h3>
+
+                            <div class="social-icons glass-card">
+                                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                                <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                                <a href="https://www.instagram.com/fadhlanfsutendi/"> <i
+                                        class="fa-brands fa-instagram"></i></a>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
             </div>
-            <div class="child">
-                <img src="Images/14.png" alt="Flutter" class="icon">
-                <h4>Flutter</h4>
-            </div>
-            <div class="child">
-                <img src="Images/15.png" alt="Laravel" class="icon">
-                <h4>Laravel</h4>
-            </div>
-        </div>
 
-       
-        <div class="tools">
-            <div class="child">
-                <img src="Images/16.png" alt="GitHub" class="icon">
-                <h4>GitHub</h4>
-            </div>
-            <div class="child">
-                <img src="Images/20.png" alt="VS Code" class="icon">
-                <h4>Figma</h4>
-            </div>
-            <div class="child">
-                <img src="Images/18.png" alt="XAMPP" class="icon">
-                <h4>Vs Code</h4>
-            </div>
-            <div class="child">
-                <img src="Images/19.png" alt="Figma" class="icon">
-                <h4>XAMPP</h4>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-
-<section class="sertifikat-wrapper">
-    <div class="certi judul">
-    <h2 style="margin-top: 20px;"><span style="color: var(--accent-soft)">My </span>Certificate</h2>
-    </div>
-
-    <div class="certificate-slider-shell">
-        <div class="sertifikat-viewport">
-            <div class="sertifikat">
-                <a class="certificate" href="https://www.dicoding.com/certificates/QLZ9RYWWMP5D" target="_blank" rel="noreferrer">
-                    <img src="Images/1.png" width="70px" alt="Seminar KSPM GOES TO SCHOOL">
-                    <p>Seminar KSPM GOES TO SCHOOL</p>
-                    <p>Unpak</p>
-                    <span>Lihat sertifikat</span>
-                </a>
-
-                <a class="certificate" href="https://www.dicoding.com/certificates/GRX5OM0QYP0M" target="_blank" rel="noreferrer">
-                    <img src="Images/2.png" width="70px" alt="IGDX Career seminar">
-                    <p>IGDX Career seminar</p>
-                    <p>KOMINFO</p>
-                    <span>Lihat sertifikat</span>
-                </a>
-
-                <a class="certificate" href="https://www.dicoding.com/certificates/98XWLJ7K9ZM3" target="_blank" rel="noreferrer">
-                    <img src="Images/3.png" width="70px" alt="Belajar Dasar Pemrograman Web">
-                    <p>Belajar Dasar Pemrograman Web</p>
-                    <p>Dicoding</p>
-                    <span>Lihat sertifikat</span>
-                </a>
-
-                <a class="certificate" href="https://www.dicoding.com/certificates/JMZV36VGNPN9" target="_blank" rel="noreferrer">
-                    <img src="Images/4.png" width="70px" alt="Belajar Dasar Unity">
-                    <p>Belajar Dasar Unity</p>
-                    <p>Unity</p>
-                    <span>Lihat sertifikat</span>
-                </a>
-
-                <a class="certificate" href="https://www.dicoding.com/certificates/JMZV36VGNPN9" target="_blank" rel="noreferrer">
-                    <img src="Images/5.png" width="70px" alt="Introduction to Financial Literacy">
-                    <p>Introduction to Financial Literacy</p>
-                    <p>Dicoding</p>
-                    <span>Lihat sertifikat</span>
-                </a>
-
-                <a class="certificate" href="https://www.dicoding.com/certificates/QLZ9RYWWMP5D" target="_blank" rel="noreferrer" aria-hidden="true">
-                    <img src="Images/1.png" width="70px" alt="Seminar KSPM GOES TO SCHOOL">
-                    <p>Seminar KSPM GOES TO SCHOOL</p>
-                    <p>Unpak</p>
-                    <span>Lihat sertifikat</span>
-                </a>
-
-                <a class="certificate" href="https://www.dicoding.com/certificates/GRX5OM0QYP0M" target="_blank" rel="noreferrer" aria-hidden="true">
-                    <img src="Images/2.png" width="70px" alt="IGDX Career seminar">
-                    <p>IGDX Career seminar</p>
-                    <p>KOMINFO</p>
-                    <span>Lihat sertifikat</span>
-                </a>
-
-                <a class="certificate" href="https://www.dicoding.com/certificates/98XWLJ7K9ZM3" target="_blank" rel="noreferrer" aria-hidden="true">
-                    <img src="Images/3.png" width="70px" alt="Belajar Dasar Pemrograman Web">
-                    <p>Belajar Dasar Pemrograman Web</p>
-                    <p>Dicoding</p>
-                    <span>Lihat sertifikat</span>
-                </a>
-
-                <a class="certificate" href="https://www.dicoding.com/certificates/JMZV36VGNPN9" target="_blank" rel="noreferrer" aria-hidden="true">
-                    <img src="Images/4.png" width="70px" alt="Belajar Dasar Unity">
-                    <p>Belajar Dasar Unity</p>
-                    <p>Unity</p>
-                    <span>Lihat sertifikat</span>
-                </a>
-
-                <a class="certificate" href="https://www.dicoding.com/certificates/JMZV36VGNPN9" target="_blank" rel="noreferrer" aria-hidden="true">
-                    <img src="Images/5.png" width="70px" alt="Introduction to Financial Literacy">
-                    <p>Introduction to Financial Literacy</p>
-                    <p>Dicoding</p>
-                    <span>Lihat sertifikat</span>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="footer-section">
-    <div class="footer-top">
-        <h1>Let’s <span style="color: var(--accent-soft)">Build Something </span> together</h1>
-    </div>
-
-    <div class="footer-main">
-        <div class="footer-box glass-card">
-
-            <div class="map-wrapper glass-card">
-    <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!4v1765463915395!6m8!1m7!1snebEKRe9JipuUf18vg3sRw!2m2!1d-6.742014987835814!2d106.8182097196779!3f22.41027397260273!4f-3.252602739726001!5f0.4000000000000002" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    <div class="address-box">
-        <i class="fa-solid fa-location-dot"></i>
-        Bogor, Jawa Barat – Indonesia
-    </div>
-</div>
-
-        </div>
-
-
-        <section class="contact glass-card" id="contact">
-            <div class="container-contact">
-                <h3>Send a Massage</h3>
-
-                <form class="contact-form">
-                    <input type="text" placeholder="Subject" required>
-                    <input type="text" placeholder="Name" required>
-                    <input type="email" placeholder="Email Address" required>
-                    <textarea placeholder="Message" required></textarea>
-                    <button type="submit">Send</button>
-
-                    <h3>Follow Me</h3>
-
-            <div class="social-icons glass-card">
-                <a href=""><i class="fa-brands fa-facebook"></i></a>
-                <a href=""><i class="fa-brands fa-tiktok"></i></a>
-               <a href="https://www.instagram.com/fadhlanfsutendi/"> <i class="fa-brands fa-instagram"></i></a>
-            </div>
-                </form>
-            </div>
+            <footer class="footer-bottom">
+                <p>Copyright © 2025 FadhlanFSutendi. All Rights Reserved.</p>
+                <p>User Terms & Conditions | Privacy Policy</p>
+            </footer>
         </section>
 
     </div>
 
-    <footer class="footer-bottom">
-        <p>Copyright © 2025 FadhlanFSutendi. All Rights Reserved.</p>
-        <p>User Terms & Conditions | Privacy Policy</p>
-    </footer>
-</section>
+    <script>
+        function openPortfolioIntro() {
+            const welcomeOverlay = document.getElementById("welcomeOverlay");
 
-    </div>
+            if (!welcomeOverlay || document.body.classList.contains("intro-entering")) {
+                return;
+            }
 
-<script>
-function openPortfolioIntro() {
-    const welcomeOverlay = document.getElementById("welcomeOverlay");
+            document.body.classList.add("intro-entering");
+            welcomeOverlay.classList.add("is-hidden");
+            document.body.classList.remove("intro-active");
+            window.__portfolioIntroOpened = true;
+            window.dispatchEvent(new CustomEvent("portfolio:intro-opened"));
 
-    if (!welcomeOverlay || document.body.classList.contains("intro-entering")) {
-        return;
-    }
-
-    document.body.classList.add("intro-entering");
-    welcomeOverlay.classList.add("is-hidden");
-    document.body.classList.remove("intro-active");
-    window.__portfolioIntroOpened = true;
-    window.dispatchEvent(new CustomEvent("portfolio:intro-opened"));
-
-    window.setTimeout(() => {
-        document.body.classList.remove("intro-entering");
-    }, 1200);
-}
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-    const buttons = document.querySelectorAll(".more-details");
-    const popup = document.getElementById("imagePopup");
-    const popupImg = document.getElementById("popupImage");
-    const closeBtn = document.querySelector(".close-btn");
-    const welcomeOverlay = document.getElementById("welcomeOverlay");
-    const enterPortfolioButton = document.getElementById("enterPortfolioButton");
-    const heroName = document.getElementById("heroName");
-    const heroRole = document.getElementById("heroRole");
-    const aboutTyping = document.getElementById("aboutTyping");
-    const aboutSection = document.getElementById("about");
-    const revealTargets = document.querySelectorAll(".container-hm, .about-wrapper, .item, .child");
-    const themeToggle = document.querySelector('.theme-toggle');
-
-    const applyTheme = (theme) => {
-        const isDark = theme === 'dark';
-        document.body.classList.toggle('dark-theme', isDark);
-        if (themeToggle) {
-            themeToggle.innerHTML = isDark ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
-            themeToggle.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
+            window.setTimeout(() => {
+                document.body.classList.remove("intro-entering");
+            }, 1200);
         }
-    };
+    </script>
 
-    const savedTheme = localStorage.getItem('site-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    applyTheme(savedTheme);
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
 
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            const newTheme = document.body.classList.contains('dark-theme') ? 'light' : 'dark';
-            localStorage.setItem('site-theme', newTheme);
-            applyTheme(newTheme);
-        });
-    }
-    let heroNameAnimated = false;
-    let aboutTextAnimated = false;
+            const buttons = document.querySelectorAll(".more-details");
+            const popup = document.getElementById("imagePopup");
+            const popupImg = document.getElementById("popupImage");
+            const closeBtn = document.querySelector(".close-btn");
+            const welcomeOverlay = document.getElementById("welcomeOverlay");
+            const enterPortfolioButton = document.getElementById("enterPortfolioButton");
+            const heroName = document.getElementById("heroName");
+            const heroRole = document.getElementById("heroRole");
+            const aboutTyping = document.getElementById("aboutTyping");
+            const aboutSection = document.getElementById("about");
+            const revealTargets = document.querySelectorAll(".container-hm, .about-wrapper, .item, .child");
+            const certificateTrack = document.querySelector(".sertifikat");
+            const themeToggle = document.querySelector('.theme-toggle');
 
-    if (popup && popupImg && closeBtn) {
-        buttons.forEach(btn => {
-            btn.addEventListener("click", () => {
-                const img = btn.previousElementSibling;
-
-                if (!img) {
-                    return;
+            const applyTheme = (theme) => {
+                const isDark = theme === 'dark';
+                document.body.classList.toggle('dark-theme', isDark);
+                if (themeToggle) {
+                    themeToggle.innerHTML = isDark ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+                    themeToggle.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
                 }
+            };
 
-                popupImg.src = img.src;
-                popup.style.display = "flex";
+            const savedTheme = localStorage.getItem('site-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            applyTheme(savedTheme);
+
+            if (themeToggle) {
+                themeToggle.addEventListener('click', () => {
+                    const newTheme = document.body.classList.contains('dark-theme') ? 'light' : 'dark';
+                    localStorage.setItem('site-theme', newTheme);
+                    applyTheme(newTheme);
+                });
+            }
+            let heroNameAnimated = false;
+            let aboutTextAnimated = false;
+
+            if (popup && popupImg && closeBtn) {
+                buttons.forEach(btn => {
+                    btn.addEventListener("click", () => {
+                        const img = btn.previousElementSibling;
+
+                        if (!img) {
+                            return;
+                        }
+
+                        popupImg.src = img.src;
+                        popup.style.display = "flex";
+                    });
+                });
+
+                closeBtn.addEventListener("click", () => {
+                    popup.style.display = "none";
+                });
+
+                popup.addEventListener("click", (e) => {
+                    if (e.target === popup) popup.style.display = "none";
+                });
+
+                    // Handle certificate clicks
+                    const certificateLinks = document.querySelectorAll(".certificate");
+                    certificateLinks.forEach(link => {
+                            link.href = "#";
+                        link.addEventListener("click", (e) => {
+                            e.preventDefault();
+                            const img = link.querySelector("img");
+                        
+                            if (!img) {
+                                return;
+                            }
+
+                            popupImg.src = img.src;
+                            popup.style.display = "flex";
+                        });
+                    });
+            }
+
+            revealTargets.forEach((target) => {
+                target.classList.add("reveal-on-scroll");
             });
-        });
 
-        closeBtn.addEventListener("click", () => {
-            popup.style.display = "none";
-        });
-
-        popup.addEventListener("click", (e) => {
-            if (e.target === popup) popup.style.display = "none";
-        });
-    }
-
-    revealTargets.forEach((target) => {
-        target.classList.add("reveal-on-scroll");
-    });
-
-    const revealOnScroll = () => {
-        revealTargets.forEach((target) => {
-            const targetTop = target.getBoundingClientRect().top;
-            if (targetTop < window.innerHeight - 80) {
-                target.classList.add("is-visible");
+            if (certificateTrack && !certificateTrack.dataset.loopCloned) {
+                certificateTrack.insertAdjacentHTML("beforeend", certificateTrack.innerHTML);
+                certificateTrack.dataset.loopCloned = "true";
             }
-        });
 
-        if (aboutSection && aboutTyping && !aboutTextAnimated) {
-            const aboutTop = aboutSection.getBoundingClientRect().top;
-            if (aboutTop < window.innerHeight - 120) {
-                startAboutTypingAnimation();
-            }
-        }
-    };
+            const revealOnScroll = () => {
+                revealTargets.forEach((target) => {
+                    const targetTop = target.getBoundingClientRect().top;
+                    if (targetTop < window.innerHeight - 80) {
+                        target.classList.add("is-visible");
+                    }
+                });
 
-    revealOnScroll();
-    window.addEventListener("scroll", revealOnScroll, { passive: true });
+                if (aboutSection && aboutTyping && !aboutTextAnimated) {
+                    const aboutTop = aboutSection.getBoundingClientRect().top;
+                    if (aboutTop < window.innerHeight - 120) {
+                        startAboutTypingAnimation();
+                    }
+                }
+            };
 
-    const startHeroNameAnimation = () => {
-        if (!heroName || heroNameAnimated) {
-            return;
-        }
+            revealOnScroll();
+            window.addEventListener("scroll", revealOnScroll, { passive: true });
 
-        heroNameAnimated = true;
-        const fullName = heroName.dataset.fullName || "";
-        let currentIndex = 0;
-
-        heroName.textContent = "";
-        heroName.classList.remove("is-running-light");
-        heroName.classList.add("is-typing");
-
-        const typingTimer = window.setInterval(() => {
-            currentIndex += 1;
-            heroName.textContent = fullName.slice(0, currentIndex);
-
-            if (currentIndex >= fullName.length) {
-                window.clearInterval(typingTimer);
-                heroName.classList.remove("is-typing");
-                heroName.classList.add("is-running-light");
-            }
-        }, 95);
-    };
-
-    const runHeroNameAnimation = () => {
-        window.setTimeout(startHeroNameAnimation, 220);
-    };
-
-    const startHeroRoleAnimation = () => {
-        if (!heroRole) {
-            return;
-        }
-
-        const roles = (heroRole.dataset.roles || "Mobile Development")
-            .split(",")
-            .map((item) => item.trim())
-            .filter(Boolean);
-
-        let roleIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-
-        const typeRole = () => {
-            const currentRole = roles[roleIndex] || "Mobile Development";
-
-            if (!isDeleting) {
-                charIndex += 1;
-                heroRole.textContent = currentRole.slice(0, charIndex);
-
-                if (charIndex >= currentRole.length) {
-                    heroRole.classList.remove("is-typing");
-                    heroRole.classList.add("is-running-light");
-                    window.setTimeout(() => {
-                        isDeleting = true;
-                        typeRole();
-                    }, 1400);
+            const startHeroNameAnimation = () => {
+                if (!heroName || heroNameAnimated) {
                     return;
                 }
 
-                window.setTimeout(typeRole, 85);
-                return;
+                heroNameAnimated = true;
+                const fullName = heroName.dataset.fullName || "";
+                let currentIndex = 0;
+
+                heroName.textContent = "";
+                heroName.classList.remove("is-running-light");
+                heroName.classList.add("is-typing");
+
+                const typingTimer = window.setInterval(() => {
+                    currentIndex += 1;
+                    heroName.textContent = fullName.slice(0, currentIndex);
+
+                    if (currentIndex >= fullName.length) {
+                        window.clearInterval(typingTimer);
+                        heroName.classList.remove("is-typing");
+                        heroName.classList.add("is-running-light");
+                    }
+                }, 95);
+            };
+
+            const runHeroNameAnimation = () => {
+                window.setTimeout(startHeroNameAnimation, 220);
+            };
+
+            const startHeroRoleAnimation = () => {
+                if (!heroRole) {
+                    return;
+                }
+
+                const roles = (heroRole.dataset.roles || "Mobile Development")
+                    .split(",")
+                    .map((item) => item.trim())
+                    .filter(Boolean);
+
+                let roleIndex = 0;
+                let charIndex = 0;
+                let isDeleting = false;
+
+                const typeRole = () => {
+                    const currentRole = roles[roleIndex] || "Mobile Development";
+
+                    if (!isDeleting) {
+                        charIndex += 1;
+                        heroRole.textContent = currentRole.slice(0, charIndex);
+
+                        if (charIndex >= currentRole.length) {
+                            heroRole.classList.remove("is-typing");
+                            heroRole.classList.add("is-running-light");
+                            window.setTimeout(() => {
+                                isDeleting = true;
+                                typeRole();
+                            }, 1400);
+                            return;
+                        }
+
+                        window.setTimeout(typeRole, 85);
+                        return;
+                    }
+
+                    heroRole.classList.remove("is-running-light");
+                    heroRole.classList.add("is-typing");
+                    charIndex -= 1;
+                    heroRole.textContent = currentRole.slice(0, Math.max(charIndex, 0));
+
+                    if (charIndex <= 0) {
+                        isDeleting = false;
+                        roleIndex = (roleIndex + 1) % roles.length;
+                        window.setTimeout(typeRole, 320);
+                        return;
+                    }
+
+                    window.setTimeout(typeRole, 45);
+                };
+
+                heroRole.textContent = "";
+                heroRole.classList.remove("is-running-light");
+                heroRole.classList.add("is-typing");
+                window.setTimeout(typeRole, 420);
+            };
+
+            const runHeroRoleAnimation = () => {
+                window.setTimeout(startHeroRoleAnimation, 640);
+            };
+
+            // Ketika welcome dibuka, jalankan efek ketik lalu running light.
+            window.addEventListener("portfolio:intro-opened", runHeroNameAnimation);
+            window.addEventListener("portfolio:intro-opened", runHeroRoleAnimation);
+
+            // Kalau intro sudah tidak aktif dari awal, langsung jalankan animasi.
+            if (!document.body.classList.contains("intro-active") || window.__portfolioIntroOpened) {
+                runHeroNameAnimation();
+                runHeroRoleAnimation();
             }
 
-            heroRole.classList.remove("is-running-light");
-            heroRole.classList.add("is-typing");
-            charIndex -= 1;
-            heroRole.textContent = currentRole.slice(0, Math.max(charIndex, 0));
+            const highlightAboutText = (text) => {
+                return text
+                    .replace(
+                        "Muhammad Fadhlan Farizan Sutendi",
+                        '<span class="about-highlight">Muhammad Fadhlan Farizan Sutendi</span>'
+                    )
+                    .replace(
+                        "Fadhlan",
+                        '<span class="about-highlight">Fadhlan</span>'
+                    )
+                    .replace(
+                        "SMK WIKRAMA BOGOR",
+                        '<span class="about-highlight">SMK WIKRAMA BOGOR</span>'
+                    );
+            };
 
-            if (charIndex <= 0) {
-                isDeleting = false;
-                roleIndex = (roleIndex + 1) % roles.length;
-                window.setTimeout(typeRole, 320);
-                return;
+            const startAboutTypingAnimation = () => {
+                if (!aboutTyping || aboutTextAnimated) {
+                    return;
+                }
+
+                aboutTextAnimated = true;
+                const fullText = aboutTyping.dataset.fullText || "";
+                let currentIndex = 0;
+
+                aboutTyping.textContent = "";
+                aboutTyping.classList.add("is-typing");
+
+                const typingTimer = window.setInterval(() => {
+                    currentIndex += 1;
+                    aboutTyping.textContent = fullText.slice(0, currentIndex);
+
+                    if (currentIndex >= fullText.length) {
+                        window.clearInterval(typingTimer);
+                        aboutTyping.classList.remove("is-typing");
+                        aboutTyping.classList.add("is-floating");
+                        aboutTyping.innerHTML = highlightAboutText(fullText);
+                    }
+                }, 26);
+            };
+
+            if (enterPortfolioButton && welcomeOverlay) {
+                enterPortfolioButton.addEventListener("click", openPortfolioIntro);
+                welcomeOverlay.addEventListener("click", openPortfolioIntro);
             }
 
-            window.setTimeout(typeRole, 45);
-        };
-
-        heroRole.textContent = "";
-        heroRole.classList.remove("is-running-light");
-        heroRole.classList.add("is-typing");
-        window.setTimeout(typeRole, 420);
-    };
-
-    const runHeroRoleAnimation = () => {
-        window.setTimeout(startHeroRoleAnimation, 640);
-    };
-
-    // Ketika welcome dibuka, jalankan efek ketik lalu running light.
-    window.addEventListener("portfolio:intro-opened", runHeroNameAnimation);
-    window.addEventListener("portfolio:intro-opened", runHeroRoleAnimation);
-
-    // Kalau intro sudah tidak aktif dari awal, langsung jalankan animasi.
-    if (!document.body.classList.contains("intro-active") || window.__portfolioIntroOpened) {
-        runHeroNameAnimation();
-        runHeroRoleAnimation();
-    }
-
-    const highlightAboutText = (text) => {
-        return text
-            .replace(
-                "Muhammad Fadhlan Farizan Sutendi",
-                '<span class="about-highlight">Muhammad Fadhlan Farizan Sutendi</span>'
-            )
-            .replace(
-                "Fadhlan",
-                '<span class="about-highlight">Fadhlan</span>'
-            )
-            .replace(
-                "SMK WIKRAMA BOGOR",
-                '<span class="about-highlight">SMK WIKRAMA BOGOR</span>'
-            );
-    };
-
-    const startAboutTypingAnimation = () => {
-        if (!aboutTyping || aboutTextAnimated) {
-            return;
-        }
-
-        aboutTextAnimated = true;
-        const fullText = aboutTyping.dataset.fullText || "";
-        let currentIndex = 0;
-
-        aboutTyping.textContent = "";
-        aboutTyping.classList.add("is-typing");
-
-        const typingTimer = window.setInterval(() => {
-            currentIndex += 1;
-            aboutTyping.textContent = fullText.slice(0, currentIndex);
-
-            if (currentIndex >= fullText.length) {
-                window.clearInterval(typingTimer);
-                aboutTyping.classList.remove("is-typing");
-                aboutTyping.classList.add("is-floating");
-                aboutTyping.innerHTML = highlightAboutText(fullText);
-            }
-        }, 26);
-    };
-
-    if (enterPortfolioButton && welcomeOverlay) {
-        enterPortfolioButton.addEventListener("click", openPortfolioIntro);
-        welcomeOverlay.addEventListener("click", openPortfolioIntro);
-    }
-
-});
-</script>
+        });
+    </script>
 
 
 </body>
+
 </html>

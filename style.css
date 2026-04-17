@@ -901,7 +901,8 @@ h2 {
     flex-wrap: nowrap;
     gap: 20px;
     width: max-content;
-    animation: certificate-marquee 18s linear infinite;
+    animation: certificate-marquee 30s linear infinite;
+    will-change: transform;
 }
 
 .certificate {
@@ -982,7 +983,7 @@ h2 {
         transform: translateX(0);
     }
     to {
-        transform: translateX(calc(-50% - 10px));
+        transform: translateX(-50%);
     }
 }
 
