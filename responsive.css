@@ -362,12 +362,23 @@ iframe {
 		border-radius: 12px;
 	}
 
-	.map-wrapper {
+	.map {
 		height: 170px;
 	}
 
 	.address-box {
 		font-size: 11px;
+		padding: 8px 12px;
+		gap: 6px;
+	}
+
+	.address-title {
+		font-size: 10px;
+	}
+
+	.address-detail {
+		font-size: 10px;
+		line-height: 1.3;
 	}
 
 	.container-contact h3 {
