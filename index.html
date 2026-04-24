@@ -101,14 +101,16 @@
     .theme-toggle {
         --track-light: rgba(255, 255, 255, 0.68);
         --track-dark: rgba(37, 99, 235, 0.16);
-        width: 76px;
-        height: 40px;
+        width: 64px;
+        height: 34px;
         border: 0;
         border-radius: 999px;
-        padding: 4px;
+        padding: 3px;
         display: inline-flex;
         align-items: center;
         justify-content: flex-start;
+        margin-left: 0.75rem;
+        flex-shrink: 0;
         background: var(--track-light);
         border: 1px solid rgba(37, 99, 235, 0.12);
         backdrop-filter: blur(16px) saturate(150%);
@@ -130,8 +132,8 @@
     }
 
     .theme-toggle .toggle-thumb {
-        width: 32px;
-        height: 32px;
+        width: 26px;
+        height: 26px;
         border-radius: 50%;
         background: rgba(255, 255, 255, 0.96);
         position: relative;
@@ -142,7 +144,7 @@
 
     .theme-toggle .toggle-icon {
         position: absolute;
-        font-size: 11px;
+        font-size: 10px;
         line-height: 1;
         transition: opacity 0.28s ease, transform 0.28s ease, color 0.28s ease;
         left: 50%;
@@ -167,7 +169,7 @@
     }
 
     body.dark-theme .theme-toggle .toggle-thumb {
-        transform: translateX(36px);
+        transform: translateX(30px);
         background: rgba(226, 232, 240, 0.96);
     }
 
