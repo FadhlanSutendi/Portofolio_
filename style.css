@@ -342,56 +342,76 @@ body.intro-entering .home-image {
     margin: 70px 0 30px 0;
 }
 
-.container {
+.project .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(235px, auto));
+    grid-template-columns: 1fr;
     align-items: center;
     gap: 1rem;
     text-align: center;
     margin-top: 30px;
 }
 
-.col {
+.project .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin: 0;
+}
+
+.project .row > * {
+    width: auto;
+    max-width: none;
+    flex: initial;
+    padding: 0;
+}
+
+.project .col {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     box-sizing: border-box;
     min-height: 320px;
     width: 100%;
-    max-width: 620px;
     background-color: var(--surface-soft);
     padding: 2rem;
-    margin: 10px;
+    margin: 0;
     border-radius: 18px;
     box-shadow: 0 10px 28px rgba(37, 99, 235, 0.08);
     border: 1px solid rgba(37, 99, 235, 0.12);
 }
 
-.col img {
+.project .col img {
     margin-top: 20px;
     border-radius: 14px;
 }
 
 /* ===== TEXT EFFECT (SUPER SMOOTH) ===== */
 
-.col h4 {
+.project .col h4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     margin-top: 35px;
+    min-height: 92px;
 }
 
-.col h4 a {
+.project .col h4 a {
     position: relative;
     text-decoration: none;
     color: var(--accent-strong);
     font-weight: 700;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 6px;
+    line-height: 1.25;
     transition: color 0.35s ease, transform 0.35s ease;
 }
 
 /* Underline smooth dari tengah */
-.col h4 a::after {
+.project .col h4 a::after {
     content: "";
     position: absolute;
     bottom: -4px;
@@ -404,30 +424,30 @@ body.intro-entering .home-image {
     opacity: 0.85;
 }
 
-.col h4 a:hover::after {
+.project .col h4 a:hover::after {
     width: 100%;
 }
 
-.col h4 a:hover {
+.project .col h4 a:hover {
     color: var(--accent);
     transform: translateY(-3px);
 }
 
-.col h4 a:active {
+.project .col h4 a:active {
     transform: scale(0.97);
     color: var(--accent-strong);
 }
 
 /* Ikon lebih smooth */
-.col h4 a svg {
+.project .col h4 a svg {
     transition: transform 0.35s ease;
 }
 
-.col h4 a:hover svg {
+.project .col h4 a:hover svg {
     transform: translateX(4px);
 }
 
-.img-box {
+.project .img-box {
     position: relative;
     display: inline-block;
     overflow: hidden;
@@ -435,23 +455,26 @@ body.intro-entering .home-image {
     transition: box-shadow 0.45s ease;
 }
 
-.img-box img {
+.project .img-box img {
     transition: transform 0.6s ease, filter 0.6s ease, opacity 0.6s ease;
     display: block;
+    width: 100%;
+    max-width: 320px;
+    margin-top: 0;
 }
 
-.img-box:hover {
+.project .img-box:hover {
     box-shadow: 0 10px 25px rgba(37, 99, 235, 0.18),
                 0 5px 15px rgba(37, 99, 235, 0.12);
 }
 
-.img-box:hover img {
+.project .img-box:hover img {
     filter: blur(3px) brightness(0.75);
     transform: scale(1.08);
     opacity: 0.9;
 }
 
-.more-details {
+.project .more-details {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -469,7 +492,7 @@ body.intro-entering .home-image {
     cursor: pointer;
 }
 
-.img-box:hover .more-details {
+.project .img-box:hover .more-details {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
 }

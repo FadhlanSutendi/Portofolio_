@@ -1,0 +1,428 @@
+/* ---------- Global responsive helpers ---------- */
+html,
+body {
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+img,
+video,
+iframe {
+	max-width: 100%;
+	height: auto;
+}
+
+/* ---------- Large tablet / small laptop ---------- */
+@media (max-width: 1200px) {
+	.container-hm {
+		width: 94%;
+		padding: 40px 32px;
+		gap: 2rem;
+	}
+
+	.home {
+		gap: 3rem;
+	}
+
+	.home-content h2 {
+		font-size: 1.75rem;
+		line-height: 1.25;
+	}
+
+	.text-animation .text {
+		font-size: 1.9rem;
+	}
+
+	.about-wrapper {
+		width: 92%;
+		height: auto;
+		padding: 34px;
+	}
+
+	.text p {
+		font-size: 1.2rem;
+	}
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 992px) {
+	nav {
+		top: 12px;
+		border-radius: 20px;
+		width: calc(100% - 20px);
+		padding: 0.85rem 1rem;
+		gap: 0.65rem;
+	}
+
+	.logo h1 {
+		font-size: 1.15rem;
+		margin: 0;
+	}
+
+	nav ul {
+		width: 100%;
+		margin-left: 0;
+		gap: 0.7rem;
+		justify-content: center;
+		flex-wrap: wrap;
+		padding-left: 0;
+	}
+
+	nav ul li a {
+		font-size: 0.88rem;
+		padding: 6px 8px;
+	}
+
+	.theme-toggle {
+		margin-left: auto;
+	}
+
+	.home {
+		padding-top: 115px;
+	}
+
+	.container-hm {
+		margin-top: 30px;
+		padding: 30px 22px;
+		flex-direction: column-reverse;
+		align-items: center;
+		text-align: center;
+	}
+
+	.home-content {
+		margin-top: 0;
+		width: 100%;
+	}
+
+	.home-content h2 {
+		font-size: 1.45rem;
+	}
+
+	.text-animation .text {
+		font-size: 1.45rem;
+	}
+
+	.icon-item {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 10px;
+	}
+
+	.icon-item a {
+		width: 3.25rem;
+		height: 3.25rem;
+		font-size: 1.15rem;
+		border-radius: 14px;
+		margin: 0;
+	}
+
+	.home-image {
+		margin: 0;
+	}
+
+	.home-image img {
+		width: 230px;
+		height: 230px;
+		margin-top: 0;
+	}
+
+	.about-wrapper {
+		flex-direction: column-reverse;
+		text-align: center;
+		gap: 24px;
+		width: 94%;
+		padding: 26px 22px;
+	}
+
+	.about-content {
+		width: 100%;
+	}
+
+	.text p {
+		font-size: 1.05rem;
+		min-height: 0;
+		line-height: 1.8;
+	}
+
+	.download-btn {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.about-img {
+		animation: none;
+	}
+
+	.about-img::before {
+		inset: 10px;
+	}
+
+	.about-img img {
+		width: 230px;
+		height: 280px;
+		margin: 0;
+	}
+
+	.project .container {
+		margin-top: 12px;
+	}
+
+	.project .col {
+		max-width: 100%;
+		margin: 8px 0;
+		min-height: 280px;
+		padding: 1.1rem;
+	}
+
+	.img-box img {
+		width: 100%;
+		max-width: 320px;
+	}
+
+	.more-details {
+		font-size: 1rem;
+	}
+
+	.skill-box,
+	.sertifikat-wrapper {
+		width: 94%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.skill-container,
+	.frame,
+	.tools {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1rem;
+	}
+
+	.footer-main {
+		width: 94%;
+	}
+}
+
+/* ---------- Phones (Android & iPhone) ---------- */
+@media (max-width: 768px) {
+	nav {
+		top: 8px;
+		width: calc(100% - 12px);
+		padding: 0.7rem;
+		gap: 0.5rem;
+	}
+
+	.logo {
+		width: 100%;
+		text-align: center;
+	}
+
+	.logo h1 {
+		font-size: 1rem;
+	}
+
+	nav ul li a {
+		font-size: 0.78rem;
+		padding: 5px 6px;
+	}
+
+	.theme-toggle {
+		width: 62px;
+		height: 34px;
+		margin: 2px auto 0;
+	}
+
+	.theme-toggle .toggle-thumb {
+		width: 26px;
+		height: 26px;
+	}
+
+	body.dark-theme .theme-toggle .toggle-thumb {
+		transform: translateX(27px);
+	}
+
+	.home {
+		padding-top: 145px;
+	}
+
+	.container-hm {
+		width: calc(100% - 16px);
+		margin-top: 12px;
+		margin-bottom: 6px;
+		padding: 18px 12px;
+		border-radius: 14px;
+	}
+
+	.home-content h2 {
+		font-size: 1.12rem;
+		line-height: 1.45;
+	}
+
+	.text-animation {
+		margin-top: 4px;
+	}
+
+	.text-animation .text {
+		font-size: 1.05rem;
+	}
+
+	.text-animation .sec-text {
+		min-width: 0;
+	}
+
+	.home-image img {
+		width: 170px;
+		height: 170px;
+	}
+
+	.heading {
+		margin-top: 38px;
+		margin-bottom: 16px;
+		font-size: 1.5rem;
+	}
+
+	.about-wrapper {
+		width: calc(100% - 16px);
+		padding: 18px 12px;
+		border-radius: 14px;
+		margin-top: 10px;
+	}
+
+	.text p {
+		font-size: 0.98rem;
+		line-height: 1.75;
+	}
+
+	.about-img img {
+		width: 170px;
+		height: 220px;
+		border-radius: 44px;
+	}
+
+	.project .container {
+		width: calc(100% - 16px);
+		padding: 0;
+	}
+
+	.project .col {
+		min-height: auto;
+	}
+
+	.project .col h4 {
+		margin-top: 16px;
+	}
+
+	.project .col h4 a {
+		font-size: 0.96rem;
+		line-height: 1.4;
+	}
+
+	.skill-box,
+	.sertifikat-wrapper,
+	.footer-main {
+		width: calc(100% - 16px);
+	}
+
+	.skill-container,
+	.frame,
+	.tools {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.item,
+	.child {
+		padding: 14px 10px;
+	}
+
+	.certificate {
+		width: 190px;
+		min-width: 190px;
+		padding: 14px;
+	}
+
+	.certificate p,
+	.certificate span {
+		font-size: 0.75rem;
+	}
+
+	.footer-section {
+		padding-top: 24px;
+	}
+
+	.footer-top h1 {
+		font-size: 1.35rem;
+		padding: 0 10px;
+		margin-bottom: 14px;
+	}
+
+	.glass-card {
+		padding: 12px;
+		border-radius: 12px;
+	}
+
+	.map-wrapper {
+		height: 170px;
+	}
+
+	.address-box {
+		font-size: 11px;
+	}
+
+	.container-contact h3 {
+		font-size: 1rem;
+		margin-bottom: 10px;
+	}
+
+	.contact-form {
+		gap: 9px;
+	}
+
+	.contact-form input,
+	.contact-form textarea,
+	.contact-form button {
+		font-size: 13px;
+	}
+
+	.social-icons {
+		gap: 10px;
+	}
+}
+
+/* ---------- Extra small phones ---------- */
+@media (max-width: 430px) {
+	nav ul {
+		gap: 0.35rem;
+	}
+
+	nav ul li a {
+		font-size: 0.72rem;
+	}
+
+	.home {
+		padding-top: 152px;
+	}
+
+	.home-content h2 {
+		font-size: 1rem;
+	}
+
+	.text-animation .text {
+		font-size: 0.96rem;
+	}
+
+	.icon-item a {
+		width: 2.9rem;
+		height: 2.9rem;
+	}
+
+	.skill-container,
+	.frame,
+	.tools {
+		grid-template-columns: 1fr;
+	}
+
+	.footer-bottom p {
+		font-size: 12px;
+		padding: 0 10px;
+	}
+}
